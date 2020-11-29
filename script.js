@@ -1,5 +1,11 @@
-let chores = ["laundry", "Downstairs bathroom and main area", "Vacuum all floors", "Living room", "Dishes", "Clean room", "Sweep"]
-
+let chores = ["Laundry", "Downstairs Bathroom and Main area", "Vaccum All Floors", "Livingroom", "Dishes", "Clean Room", "Sweep"]
+let chore_pics = {"Laundry":"laundry.webp", 
+"Downstairs Bathroom and Main area":"downstairs.png", 
+"Vaccum All Floors": "vaccum.gif", 
+"Livingroom": "livingroom.jpg", 
+"Dishes": "dishes.jpg", 
+"Clean Room": "room.jfif", 
+"Sweep": "sweep.png"};
 function randomNumber(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -17,6 +23,9 @@ window.onload = function (){
     
     function output(){
         let string_element = generateChore();
+        let pic = chore_pics[string_element];
         document.getElementById("chore").innerHTML = string_element;
+        document.getElementById("chore_pic").setAttribute("src",pic);
+        
     }
 }
