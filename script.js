@@ -7,7 +7,7 @@ function randomNumber(min, max) {
 }
 
 function generateChore(){
-    index = randomNumber(0, chores.length);
+    index = randomNumber(0, (chores.length - 1));
     chore = chores[index];
     return chore;
 }
